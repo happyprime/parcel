@@ -1,0 +1,104 @@
+/* Editor stylesheet for the Parcel theme. */
+
+/**
+ * From https://github.com/hankchizljaw/modern-css-reset
+ */
+
+/* Remove default padding */
+
+ul[class],
+ol[class] {
+	padding: 0;
+}
+
+/* Remove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Set core body defaults */
+
+body {
+	box-sizing: border-box;
+	line-height: 1.55;
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+}
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+
+/* stylelint-disable no-duplicate-selectors */
+
+ul[class],
+ol[class] {
+	list-style: none;
+}
+
+/* stylelint-enable no-duplicate-selectors */
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+	-webkit-text-decoration-skip: ink;
+	        text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Remove animations and transitions for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+
+	* {
+		-webkit-animation-duration: 0.01ms !important;
+		        animation-duration: 0.01ms !important;
+		-webkit-animation-iteration-count: 1 !important;
+		        animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+/* Wrap pre tag content */
+
+pre {
+	overflow-x: auto;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}

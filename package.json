@@ -1,0 +1,31 @@
+{
+	"name": "parcel",
+	"version": "0.0.1",
+	"description": "A WordPress theme?",
+	"author": "Happy Prime",
+	"homepage": "https://github.com/happyprime/parcel",
+	"devDependencies": {
+		"autoprefixer": "^10.0.2",
+		"postcss": "^8.1.7",
+		"postcss-cli": "^8.2.0",
+		"postcss-custom-media": "^7.0.8",
+		"postcss-import": "^13.0.0",
+		"precss": "^4.0.0",
+		"stylelint": "^13.7.2",
+		"stylelint-config-wordpress": "^17.0.0"
+	},
+	"scripts": {
+		"build": "npm run build:theme",
+		"build:theme": "npm run stylelint:theme && npm run postcss:main & npm run postcss:editor",
+		"postcss:main": "postcss -o style.css css/style.css",
+		"postcss:editor": "postcss -o editor-style.css css/editor-style.css",
+		"stylelint:theme": "stylelint css/**/*.css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/happyprime/parcel.git"
+	},
+	"bugs": {
+		"url": "https://github.com/happyprime/parcel/issues"
+	}
+}

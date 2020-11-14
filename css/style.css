@@ -1,0 +1,15 @@
+/*
+Theme Name: Parcel
+Theme URI: https://github.com/happyprime/parcel/
+Author: Happy Prime
+Author URI: https://happyprime.co
+Description: A WordPress theme?
+Requires at least: WordPress 5.5
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: parcel
+*/
+
+@import "wp/block-library-5.5.1.css";
+@import "imports/reset.css";
