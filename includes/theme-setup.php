@@ -10,7 +10,6 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\set_content_width', 0 );
 add_action( 'widgets_init', __NAMESPACE__ . '\widgets_init' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_assets' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\remove_core_block_library_styles', 9999 );
-add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_block_editor_assets' );
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -92,6 +91,9 @@ function setup() {
 			'flex-height' => true,
 		)
 	);
+
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'editor-style.css' );
 }
 
 /**
@@ -157,16 +159,4 @@ function enqueue_assets() {
 function remove_core_block_library_styles() {
 	wp_dequeue_style( 'wp-block-library' );
 	wp_deregister_style( 'wp-block-library' );
-}
-
-/**
- * Enqueue the stylesheet created for the editor.
- */
-function enqueue_block_editor_assets() {
-	wp_enqueue_style(
-		'parcel-block-editor-style',
-		get_stylesheet_directory_uri() . '/editor-style.css',
-		array(),
-		\Parcel\Utilities\get_version()
-	);
 }
